@@ -29,7 +29,7 @@
     .container{max-width:1120px;margin:0 auto;padding:0 24px}
     .topbar{
       position:sticky;top:0;z-index:20;
-      background:rgba(246,241,232,.92);
+      background:rgba(246,241,232,.94);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -47,43 +47,32 @@
       margin-bottom:4px;
       font-family: Arial, Helvetica, sans-serif;
     }
-    .brand strong{
-      font-size:20px;
-      font-weight:700;
-    }
+    .brand strong{font-size:20px;font-weight:700}
     nav{
       display:flex;gap:22px;flex-wrap:wrap;
       font-family: Arial, Helvetica, sans-serif;
-      font-size:14px;
-      color:var(--muted);
+      font-size:14px;color:var(--muted);
     }
     nav a:hover{color:var(--wine)}
-    .hero{
-      padding:88px 0 48px;
-      text-align:center;
-    }
+    .hero{padding:88px 0 48px;text-align:center}
     .eyebrow{
       text-transform:uppercase;
       letter-spacing:.3em;
       color:var(--wine);
-      font: 12px/1.4 Arial, Helvetica, sans-serif;
+      font:12px/1.4 Arial, Helvetica, sans-serif;
     }
     h1,h2,h3,h4{line-height:1.15;margin:0 0 14px}
     h1{font-size:clamp(36px, 6vw, 68px)}
     h2{font-size:clamp(30px, 4vw, 44px)}
     h3{font-size:clamp(24px, 3vw, 34px)}
-    p.lead{
-      max-width:760px;margin:22px auto 0;
-      font-size:20px;color:var(--muted);
-    }
+    p.lead{max-width:760px;margin:22px auto 0;font-size:20px;color:var(--muted)}
     .buttons{
-      margin-top:34px;
-      display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+      margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
       font-family: Arial, Helvetica, sans-serif;
     }
     .btn{
-      display:inline-block;padding:14px 22px;border-radius:16px;
-      transition:.2s ease; font-weight:600;
+      display:inline-block;padding:14px 22px;border-radius:16px;transition:.2s ease;font-weight:600;
+      border:none;cursor:pointer;
     }
     .btn-primary{background:var(--wine);color:#fff}
     .btn-primary:hover{transform:translateY(-1px);opacity:.95}
@@ -91,92 +80,57 @@
     .btn-outline:hover{background:rgba(142,75,77,.05)}
     section{padding:28px 0 72px}
     .intro-box{
-      background:var(--sand);
-      border-radius:28px;
-      padding:34px;
-      border:1px solid rgba(142,75,77,.10);
+      background:var(--sand);border-radius:28px;padding:34px;border:1px solid rgba(142,75,77,.10);
     }
-    .grid{
-      display:grid;gap:24px;
-    }
+    .grid{display:grid;gap:24px}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .grid-2{grid-template-columns:repeat(2,1fr)}
     .card{
-      background:var(--paper);
-      border-radius:26px;
-      padding:28px;
-      box-shadow:0 10px 30px rgba(0,0,0,.04);
-      border:1px solid var(--line);
+      background:var(--paper);border-radius:26px;padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.04);border:1px solid var(--line);
     }
     .tag{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#F3ECE3;
-      color:var(--wine);
-      font:600 12px Arial, Helvetica, sans-serif;
+      display:inline-block;padding:6px 10px;border-radius:999px;background:#F3ECE3;
+      color:var(--wine);font:600 12px Arial, Helvetica, sans-serif;
     }
-    .meta{
-      color:var(--wine);
-      font: 12px Arial, Helvetica, sans-serif;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      margin-bottom:10px;
-    }
+    .meta{color:var(--wine);font:12px Arial, Helvetica, sans-serif;text-transform:uppercase;letter-spacing:.18em;margin-bottom:10px}
     .card p{color:var(--muted)}
-    .dark{
-      background:var(--dark);
-      color:#F6F1E8;
-      border:none;
-    }
+    .dark{background:var(--dark);color:#F6F1E8;border:none}
     .dark p{color:#E7DDD2}
-    .pill-list{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .pill{
-      padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
-      font-size:14px;
-    }
-    .list-card{
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:20px;
-      padding:18px;
-    }
-    .newsletter{
-      background:var(--sand);
-      border-radius:28px;
-      padding:36px;
-    }
-    .newsletter-form{
-      margin-top:22px;
-      display:flex;gap:12px;flex-wrap:wrap;
-    }
-    input[type="email"]{
-      flex:1;min-width:260px;
-      padding:14px 16px;border-radius:14px;border:1px solid var(--line);
+    .list-card{border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:18px}
+    .newsletter{background:var(--sand);border-radius:28px;padding:36px}
+    .newsletter-form{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    input[type="email"], input[type="text"]{
+      flex:1;min-width:260px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);
       font-size:16px;background:#fff;
     }
     footer{
-      margin-top:30px;
-      background:var(--dark);
-      color:#F6F1E8;
-      padding:36px 0;
-      text-align:center;
+      margin-top:30px;background:var(--dark);color:#F6F1E8;padding:36px 0;text-align:center;
       font-family: Arial, Helvetica, sans-serif;
     }
     .muted{color:var(--muted)}
-    .section-head{
-      display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:26px
-    }
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:26px}
     .section-head p{max-width:560px;color:var(--muted);margin:0}
     .post-link{color:var(--wine);font-weight:700;font-family:Arial, Helvetica, sans-serif}
     .post-link:hover{text-decoration:underline}
+    .search-wrap{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 28px}
+    .search-box{flex:1;min-width:280px}
+    .filter-note{font-family:Arial, Helvetica, sans-serif;font-size:14px;color:var(--muted)}
+    .archive-item{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
+    .archive-item:first-child{border-top:none}
+    .archive-item h4{margin:0 0 6px;font-size:26px}
+    .archive-meta{font:12px Arial, Helvetica, sans-serif;color:var(--wine);text-transform:uppercase;letter-spacing:.18em}
+    .archive-link{white-space:nowrap;font-family:Arial, Helvetica, sans-serif;font-weight:700;color:var(--wine)}
+    .archive-link:hover{text-decoration:underline}
+    .result-empty{display:none;padding:24px 0;color:var(--muted);font-style:italic}
+    .article-image{width:100%;border-radius:20px;margin-bottom:15px;display:block;object-fit:cover;aspect-ratio:4/3;background:#eee}
     @media (max-width: 900px){
       .grid-3,.grid-2{grid-template-columns:1fr}
       .section-head{display:block}
       nav{display:none}
       .hero{padding-top:72px}
+      .archive-item{display:block}
+      .archive-link{display:inline-block;margin-top:10px}
     }
   </style>
 </head>
@@ -188,7 +142,7 @@
         <strong>por Paula Costa</strong>
       </div>
       <nav>
-        <a href="#cronicas">Crônicas e Contos</a>
+        <a href="#publicacoes">Publicações</a>
         <a href="#resenhas">Resenha Crítica</a>
         <a href="#recomendacoes">Recomendações</a>
         <a href="#sobre">Sobre</a>
@@ -206,7 +160,7 @@
         A <strong>Estante Inteligente por Paula Costa</strong> reúne crônicas inéditas, resenhas críticas e recomendações literárias para leitores que buscam profundidade, sensibilidade e curadoria.
       </p>
       <div class="buttons">
-        <a class="btn btn-primary" href="#cronicas">Ler crônicas</a>
+        <a class="btn btn-primary" href="#publicacoes">Ver publicações</a>
         <a class="btn btn-outline" href="https://www.instagram.com/estante.inteligente/" target="_blank" rel="noreferrer">Acessar Instagram</a>
       </div>
     </section>
@@ -216,57 +170,100 @@
         <div class="grid grid-2">
           <div>
             <div class="eyebrow">Proposta</div>
-            <h2>Mais profundidade, mais repertório, mais presença autoral.</h2>
+            <h2>Um arquivo vivo de textos, leituras e presença autoral.</h2>
           </div>
           <div>
             <p class="muted">
-              Este site foi pensado como a casa principal da sua marca literária: um lugar para publicar textos completos, fortalecer sua autoridade e organizar seu conteúdo além do Instagram.
+              Aqui, cada publicação tem seu próprio espaço. A página inicial funciona como uma vitrine organizada, com busca por tema, palavra ou termo para facilitar a navegação do leitor.
             </p>
             <p class="muted">
-              Depois, você pode expandir com novas páginas, arquivo de crônicas, newsletter real e até monetização com recomendações de livros.
+              Assim, seu site deixa de ter limite para textos e passa a funcionar como um acervo literário em crescimento.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="cronicas" class="container">
+    <section id="publicacoes" class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Seção principal</div>
-          <h2>Crônicas e Contos</h2>
+          <div class="eyebrow">Arquivo literário</div>
+          <h2>Publicações</h2>
         </div>
-        <p>Textos autorais inéditos para leitores que gostam de linguagem com presença, observação delicada e escrita com identidade.</p>
+        <p>Pesquise por assunto, palavra-chave ou termo. Depois, clique no texto que quiser ler por completo em uma nova página.</p>
+      </div>
+
+      <div class="card">
+        <div class="search-wrap">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Pesquise por maternidade, leitura, conto, crônica, crescimento..." />
+          </div>
+          <button class="btn btn-outline" onclick="clearSearch()">Limpar busca</button>
+        </div>
+        <div class="filter-note">A busca funciona por título, categoria, resumo e palavras-chave.</div>
+
+        <div id="archiveList">
+          <div class="archive-item searchable-item" data-search="meu coração aprendeu a andar crônica maternidade filho pedrinho crescimento amor mãe infância">
+            <div>
+              <div class="archive-meta">Crônica • Maternidade</div>
+              <h4>Meu coração aprendeu a andar</h4>
+              <p>Uma crônica sobre o amor materno e a delicada dor de assistir ao crescimento de um filho.</p>
+            </div>
+            <a class="archive-link" href="meu-coracao-aprendeu-a-andar.html">Ler publicação →</a>
+          </div>
+
+          <div class="archive-item searchable-item" data-search="as marcas que a leitura deixa nas mãos crônica leitura livros memória literatura leitor">
+            <div>
+              <div class="archive-meta">Crônica • Leitura</div>
+              <h4>As marcas que a leitura deixa nas mãos</h4>
+              <p>Um texto sobre os gestos da leitura, a memória afetiva dos livros e os rastros que uma boa história deixa em nós.</p>
+            </div>
+            <a class="archive-link" href="as-marcas-que-a-leitura-deixa-nas-maos.html">Ler publicação →</a>
+          </div>
+
+          <div class="archive-item searchable-item" data-search="toda casa merece um canto de silêncio conto intimidade casa silêncio escrita autoral">
+            <div>
+              <div class="archive-meta">Conto • Escrita autoral</div>
+              <h4>Toda casa merece um canto de silêncio</h4>
+              <p>Um conto curto sobre silêncio, interioridade e o espaço necessário para que uma história amadureça.</p>
+            </div>
+            <a class="archive-link" href="toda-casa-merece-um-canto-de-silencio.html">Ler publicação →</a>
+          </div>
+        </div>
+
+        <div id="emptyState" class="result-empty">Nenhuma publicação encontrada para essa busca.</div>
+      </div>
+    </section>
+
+    <section id="destaque" class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Destaque</div>
+          <h2>Última publicação</h2>
+        </div>
+        <p>Uma vitrine em destaque para o texto mais recente ou para aquele que você quiser impulsionar no momento.</p>
       </div>
       <div class="grid grid-3">
         <article class="card">
-         <img src="cronica-pedrinho.jpeg" alt="Mãe e filho em momento de carinho" style="width:100%; border-radius:20px; margin-bottom:15px;">
-  <span class="tag">Crônica inédita</span>
-  <h3>Meu coração aprendeu a andar</h3>
-  <p>
-    Dizem que, quando um filho nasce, o coração passa a bater fora do peito. É uma frase bonita, dessas frases de cartão de livraria, mas a verdade é que ninguém te avisa que esse coração ganha pernas, aprende a correr e, eventualmente, vai querer atravessar a rua sozinho.
-  </p>
-  <p>
-    Olhar para você hoje, Pedrinho, é como assistir a um amanhecer em câmera lenta. É lindo. Existe uma mágica quase inexplicável em ver como suas mãos, que antes mal envolviam meu polegar, agora já seguram o lápis com firmeza para desenhar o que você chama de “mundo”.
-  </p>
-  <p>
-    Seus passos ficaram pesados, decididos, e cada nova palavra que você aprende é uma pequena vitória que eu comemoro como se fosse uma sinfonia.
-  </p>
-  <p>
-    Ver você crescer é o privilégio mais doloroso que eu já experimentei. Porque, a cada passo que você dá em direção ao mundo, eu preciso aprender, em silêncio, a dar um passo para trás.
-  </p>
-</article>
-        <article class="card">
+          <img src="cronica-pedrinho.jpeg" alt="Mãe e filho em momento de carinho" class="article-image">
           <span class="tag">Crônica inédita</span>
-          <h3>As marcas que a leitura deixa nas mãos</h3>
-          <p>Ler também é um gesto físico: sublinhar um espanto, fechar o livro devagar, voltar à página anterior porque uma frase ainda continua dentro de nós.</p>
-          <a class="post-link" href="#">Ler texto completo →</a>
+          <h3>Meu coração aprendeu a andar</h3>
+          <p>Uma reflexão delicada sobre a experiência de ver um filho crescer e aprender, aos poucos, a caminhar em direção ao mundo.</p>
+          <a class="post-link" href="meu-coracao-aprendeu-a-andar.html">Ler texto completo →</a>
         </article>
+
         <article class="card">
-          <span class="tag">Conto curto</span>
+          <span class="tag">Crônica</span>
+          <h3>As marcas que a leitura deixa nas mãos</h3>
+          <p>Um texto sobre sublinhar espantos, fechar livros devagar e perceber como certas leituras continuam em nós.</p>
+          <a class="post-link" href="as-marcas-que-a-leitura-deixa-nas-maos.html">Ler texto completo →</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">Conto</span>
           <h3>Toda casa merece um canto de silêncio</h3>
-          <p>Nem sempre o silêncio é ausência. Às vezes, ele é o espaço delicado onde uma história começa, amadurece e encontra coragem para existir em voz própria.</p>
-          <a class="post-link" href="#">Ler texto completo →</a>
+          <p>Uma narrativa breve sobre recolhimento, escuta interior e a coragem silenciosa da escrita.</p>
+          <a class="post-link" href="toda-casa-merece-um-canto-de-silencio.html">Ler texto completo →</a>
         </article>
       </div>
     </section>
@@ -349,5 +346,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const items = document.querySelectorAll('.searchable-item');
+    const emptyState = document.getElementById('emptyState');
+
+    function runSearch() {
+      const term = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const haystack = item.getAttribute('data-search').toLowerCase();
+        const isVisible = haystack.includes(term);
+        item.style.display = isVisible ? 'flex' : 'none';
+        if (window.innerWidth <= 900 && isVisible) {
+          item.style.display = 'block';
+        }
+        if (isVisible) visibleCount++;
+      });
+
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    function clearSearch() {
+      searchInput.value = '';
+      runSearch();
+    }
+
+    searchInput.addEventListener('input', runSearch);
+  </script>
 </body>
 </html>
