@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estante Inteligente por Paula Costa</title>
+  <meta name="description" content="Crônicas inéditas, resenhas críticas e recomendações literárias por Paula Costa." />
+  <style>
+    :root{
+      --bg:#F6F1E8;
+      --paper:#FFFFFF;
+      --text:#2E2A26;
+      --muted:#5A514A;
+      --wine:#8E4B4D;
+      --sand:#EADFD0;
+      --dark:#2A2522;
+      --line:rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 24px}
+    .topbar{
+      position:sticky;top:0;z-index:20;
+      background:rgba(246,241,232,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:16px 0;
+      gap:20px;
+    }
+    .brand small{
+      display:block;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      color:var(--wine);
+      font-size:12px;
+      margin-bottom:4px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .brand strong{
+      font-size:20px;
+      font-weight:700;
+    }
+    nav{
+      display:flex;gap:22px;flex-wrap:wrap;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:14px;
+      color:var(--muted);
+    }
+    nav a:hover{color:var(--wine)}
+    .hero{
+      padding:88px 0 48px;
+      text-align:center;
+    }
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.3em;
+      color:var(--wine);
+      font: 12px/1.4 Arial, Helvetica, sans-serif;
+    }
+    h1,h2,h3,h4{line-height:1.15;margin:0 0 14px}
+    h1{font-size:clamp(36px, 6vw, 68px)}
+    h2{font-size:clamp(30px, 4vw, 44px)}
+    h3{font-size:clamp(24px, 3vw, 34px)}
+    p.lead{
+      max-width:760px;margin:22px auto 0;
+      font-size:20px;color:var(--muted);
+    }
+    .buttons{
+      margin-top:34px;
+      display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .btn{
+      display:inline-block;padding:14px 22px;border-radius:16px;
+      transition:.2s ease; font-weight:600;
+    }
+    .btn-primary{background:var(--wine);color:#fff}
+    .btn-primary:hover{transform:translateY(-1px);opacity:.95}
+    .btn-outline{border:1px solid rgba(142,75,77,.28);color:var(--wine);background:transparent}
+    .btn-outline:hover{background:rgba(142,75,77,.05)}
+    section{padding:28px 0 72px}
+    .intro-box{
+      background:var(--sand);
+      border-radius:28px;
+      padding:34px;
+      border:1px solid rgba(142,75,77,.10);
+    }
+    .grid{
+      display:grid;gap:24px;
+    }
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{
+      background:var(--paper);
+      border-radius:26px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.04);
+      border:1px solid var(--line);
+    }
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#F3ECE3;
+      color:var(--wine);
+      font:600 12px Arial, Helvetica, sans-serif;
+    }
+    .meta{
+      color:var(--wine);
+      font: 12px Arial, Helvetica, sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      margin-bottom:10px;
+    }
+    .card p{color:var(--muted)}
+    .dark{
+      background:var(--dark);
+      color:#F6F1E8;
+      border:none;
+    }
+    .dark p{color:#E7DDD2}
+    .pill-list{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .pill{
+      padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      font-size:14px;
+    }
+    .list-card{
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      padding:18px;
+    }
+    .newsletter{
+      background:var(--sand);
+      border-radius:28px;
+      padding:36px;
+    }
+    .newsletter-form{
+      margin-top:22px;
+      display:flex;gap:12px;flex-wrap:wrap;
+    }
+    input[type="email"]{
+      flex:1;min-width:260px;
+      padding:14px 16px;border-radius:14px;border:1px solid var(--line);
+      font-size:16px;background:#fff;
+    }
+    footer{
+      margin-top:30px;
+      background:var(--dark);
+      color:#F6F1E8;
+      padding:36px 0;
+      text-align:center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .muted{color:var(--muted)}
+    .section-head{
+      display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:26px
+    }
+    .section-head p{max-width:560px;color:var(--muted);margin:0}
+    .post-link{color:var(--wine);font-weight:700;font-family:Arial, Helvetica, sans-serif}
+    .post-link:hover{text-decoration:underline}
+    @media (max-width: 900px){
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .section-head{display:block}
+      nav{display:none}
+      .hero{padding-top:72px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <small>Estante Inteligente</small>
+        <strong>por Paula Costa</strong>
+      </div>
+      <nav>
+        <a href="#cronicas">Crônicas e Contos</a>
+        <a href="#resenhas">Resenha Crítica</a>
+        <a href="#recomendacoes">Recomendações</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#instagram">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="eyebrow">Literatura, leitura e escrita autoral</div>
+      <h1>Um espaço para escrever, pensar e expandir o que não cabe no feed.</h1>
+      <p class="lead">
+        A <strong>Estante Inteligente por Paula Costa</strong> reúne crônicas inéditas, resenhas críticas e recomendações literárias para leitores que buscam profundidade, sensibilidade e curadoria.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#cronicas">Ler crônicas</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/estante.inteligente/" target="_blank" rel="noreferrer">Acessar Instagram</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="intro-box">
+        <div class="grid grid-2">
+          <div>
+            <div class="eyebrow">Proposta</div>
+            <h2>Mais profundidade, mais repertório, mais presença autoral.</h2>
+          </div>
+          <div>
+            <p class="muted">
+              Este site foi pensado como a casa principal da sua marca literária: um lugar para publicar textos completos, fortalecer sua autoridade e organizar seu conteúdo além do Instagram.
+            </p>
+            <p class="muted">
+              Depois, você pode expandir com novas páginas, arquivo de crônicas, newsletter real e até monetização com recomendações de livros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cronicas" class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Seção principal</div>
+          <h2>Crônicas e Contos</h2>
+        </div>
+        <p>Textos autorais inéditos para leitores que gostam de linguagem com presença, observação delicada e escrita com identidade.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="tag">Crônica inédita</span>
+          <h3>Quando a estante também nos lê</h3>
+          <p>Há livros que parecem esperar o nosso tempo certo. Ficam em silêncio por semanas, meses, anos, até que um dia nos olham de volta e dizem exatamente o que precisávamos ouvir.</p>
+          <a class="post-link" href="#">Ler texto completo →</a>
+        </article>
+        <article class="card">
+          <span class="tag">Crônica inédita</span>
+          <h3>As marcas que a leitura deixa nas mãos</h3>
+          <p>Ler também é um gesto físico: sublinhar um espanto, fechar o livro devagar, voltar à página anterior porque uma frase ainda continua dentro de nós.</p>
+          <a class="post-link" href="#">Ler texto completo →</a>
+        </article>
+        <article class="card">
+          <span class="tag">Conto curto</span>
+          <h3>Toda casa merece um canto de silêncio</h3>
+          <p>Nem sempre o silêncio é ausência. Às vezes, ele é o espaço delicado onde uma história começa, amadurece e encontra coragem para existir em voz própria.</p>
+          <a class="post-link" href="#">Ler texto completo →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="resenhas" class="container">
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="meta">Conteúdo fixo</div>
+          <h2>Resenha Crítica</h2>
+          <p>Leituras que não param na superfície. Aqui, a análise vai além do resumo: estilo, linguagem, estrutura narrativa, temas, impactos e posicionamento autoral.</p>
+        </div>
+        <div class="card">
+          <div class="meta">Conteúdo fixo</div>
+          <h2>Recomendações</h2>
+          <p>Indicações com curadoria para quem quer escolher melhor o que lê: por tema, momento de vida, experiência estética ou perfil de leitor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recomendacoes" class="container">
+      <div class="card dark">
+        <div class="grid grid-2">
+          <div>
+            <div class="eyebrow" style="color:#D9C7A2">Curadoria literária</div>
+            <h2>Recomendações que conversam com o leitor certo.</h2>
+            <p>Uma seção pensada para crescer com você, podendo incluir listas temáticas, indicações comentadas e links futuros para compra de livros.</p>
+          </div>
+          <div class="grid grid-2">
+            <div class="list-card">Para começar a ler crônicas contemporâneas</div>
+            <div class="list-card">Livros para quem quer escrever melhor</div>
+            <div class="list-card">Leituras intensas e memoráveis</div>
+            <div class="list-card">Obras para sair da zona de conforto</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container">
+      <div class="card">
+        <div class="eyebrow">Sobre a autora</div>
+        <h2>Paula Costa</h2>
+        <p>
+          Professora de Língua Portuguesa, Literatura, Arte e Filosofia, Paula Costa criou a <strong>Estante Inteligente</strong> como um espaço para compartilhar escrita autoral, leitura crítica e curadoria literária com identidade.
+        </p>
+        <p>
+          O projeto nasce do encontro entre sensibilidade, repertório e presença: um lugar para leitores que desejam sentir mais, pensar melhor e levar a literatura para além do consumo apressado das redes.
+        </p>
+      </div>
+    </section>
+
+    <section id="newsletter" class="container">
+      <div class="newsletter">
+        <div class="eyebrow">Newsletter</div>
+        <h2>Receba crônicas inéditas no seu e-mail</h2>
+        <p class="muted">Entre para a lista e acompanhe textos, reflexões e recomendações que não cabem no Instagram.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Depois podemos conectar esse formulário a um serviço real de newsletter.');">
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <button class="btn btn-primary" type="submit">Quero receber</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="instagram" class="container">
+      <div class="card">
+        <div class="eyebrow">Instagram</div>
+        <h2>@estante.inteligente</h2>
+        <p>O Instagram funciona como porta de entrada visual e o site aprofunda a experiência: mais texto, mais organização, mais autoridade.</p>
+        <div class="buttons" style="justify-content:flex-start">
+          <a class="btn btn-primary" href="https://www.instagram.com/estante.inteligente/" target="_blank" rel="noreferrer">Visitar perfil</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 Estante Inteligente por Paula Costa</div>
+      <div style="margin-top:10px">
+        <a href="https://www.instagram.com/estante.inteligente/" target="_blank" rel="noreferrer">@estante.inteligente</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
